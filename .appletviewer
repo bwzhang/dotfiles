@@ -1,0 +1,5 @@
+#User-specific properties for AppletViewer
+#Thu Mar 05 14:25:34 EST 2015
+http.proxyPort=80
+package.restrict.access.sun=true
+http.proxyHost=
