@@ -19,18 +19,33 @@ Plugin 'kien/ctrlp.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" Default Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 syntax enable
+" Setting theme
 set background=dark
 colorscheme solarized
-
 " ctrl-c to exit insert mode
 noremap <C-c> <Esc>
-
 " show line numbers
 set number
-
 " tab with 4 spaces
 set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+" Make searches case insensitive
+set ignorecase
+" Only highlight search as it's typed in
+set nohlsearch
+set incsearch
+set autoindent
+set ruler
+
