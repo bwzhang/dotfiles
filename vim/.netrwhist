@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/brandonzhang'
 let g:netrw_dirhist_2='/Users/brandonzhang/.cups'
 let g:netrw_dirhist_3='/Users/brandonzhang/.vim/bundle/vim-colors-solarized'
+let g:netrw_dirhist_4='/Users/brandonzhang/IdeaProjects/compilers/.git'
