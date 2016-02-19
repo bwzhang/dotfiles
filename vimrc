@@ -24,6 +24,8 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 " improving f and t commands
 Plugin 'chrisbra/improvedft'
+" aligning on symbols
+Plugin 'Align'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -90,3 +92,6 @@ set incsearch
 set autoindent
 set ruler
 
+" Remap <tab> and <s-tab> to :bnext and :bprevious
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
