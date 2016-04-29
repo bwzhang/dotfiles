@@ -1,0 +1,5 @@
+# Show all possible completions if there's an ambiguity
+set show-all-if-ambiguous on
+# Ignore case for completions
+set completion-ignore-case on
+
