@@ -6,28 +6,28 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'argtextobj.vim'
-Plugin 'austintaylor/vim-indentobject'
-Plugin 'chriskempson/base16-vim'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'ervandew/supertab'
-Plugin 'godlygeek/tabular'
-Plugin 'kien/ctrlp.vim'
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'sjl/gundo.vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'airblade/vim-gitgutter'
+Plugin 'argtextobj.vim'                 " text object for arguments
+Plugin 'austintaylor/vim-indentobject'  " text object for indents
+Plugin 'chriskempson/base16-vim'        " colorscheme
+Plugin 'easymotion/vim-easymotion'      " convenient cursor motion
+Plugin 'godlygeek/tabular'              " align text
+Plugin 'kien/ctrlp.vim'                 " fuzzy finder
+Plugin 'mattn/gist-vim'                 " quickly make github gists
+Plugin 'ntpeters/vim-better-whitespace' " remove trailing whitespace
+Plugin 'scrooloose/nerdcommenter'       " quick commenting
+Plugin 'scrooloose/nerdtree'            " visual file tree
+Plugin 'scrooloose/syntastic'           " syntax checking
+Plugin 'sjl/gundo.vim'                  " to revert edits
+Plugin 'terryma/vim-multiple-cursors'   " edit multiple locations
+Plugin 'tpope/vim-fugitive'             " git plugin
+Plugin 'tpope/vim-repeat'               " repeats plugin commands with .
+Plugin 'tpope/vim-sleuth'               " detects tab size
+Plugin 'tpope/vim-surround'             " easily change surrounding text
+Plugin 'vim-airline/vim-airline'        " status line
+Plugin 'vim-airline/vim-airline-themes' " theme for status line
+Plugin 'airblade/vim-gitgutter'         " easily view changed lines
+Plugin 'benmills/vimux'                 " run commands from tmux pane
+Plugin 'Valloric/YouCompleteMe'         " code completion
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -68,9 +68,6 @@ map N <Plug>(easymotion-prev)
 let g:EasyMotion_smartcase=1
 
 " nerdtreee configuration
-" start nerdtree if vim is opened with no file specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " maps <leader>f to open nerdtree
 map <silent> <leader>f :NERDTreeToggle<CR>
 " close nerdtree if it's the only window open
