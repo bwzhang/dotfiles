@@ -124,28 +124,6 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :wri
 nnoremap <C-e> 6<C-e>
 nnoremap <C-y> 6<C-y>
 
-" Window movement shortcuts
-" move to the window in the direction shown, or create a new window
-" taken from
-" https://github.com/nicknisi/dotfiles/blob/master/config/nvim/init.vim
-function! WinMove(key)
-    let t:curwin = winnr()
-    exec "wincmd ".a:key
-    if (t:curwin == winnr())
-        if (match(a:key,'[jk]'))
-            wincmd v
-        else
-            wincmd s
-        endif
-        exec "wincmd ".a:key
-    endif
-endfunction
-
-map <silent> <leader>h :call WinMove('h')<CR>
-map <silent> <leader>j :call WinMove('j')<CR>
-map <silent> <leader>k :call WinMove('k')<CR>
-map <silent> <leader>l :call WinMove('l')<cr>
-
 " strip trailing whitespace on save
 autocmd BufWritePre * StripWhitespace
 
