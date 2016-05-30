@@ -13,6 +13,7 @@ Plugin 'easymotion/vim-easymotion'      " convenient cursor motion
 Plugin 'godlygeek/tabular'              " align text
 Plugin 'kien/ctrlp.vim'                 " fuzzy finder
 Plugin 'mattn/gist-vim'                 " quickly make github gists
+Plugin 'majutsushi/tagbar'              " browse ctags
 Plugin 'ntpeters/vim-better-whitespace' " remove trailing whitespace
 Plugin 'scrooloose/nerdcommenter'       " quick commenting
 Plugin 'scrooloose/nerdtree'            " visual file tree
@@ -23,6 +24,7 @@ Plugin 'tpope/vim-fugitive'             " git plugin
 Plugin 'tpope/vim-repeat'               " repeats plugin commands with .
 Plugin 'tpope/vim-sleuth'               " detects tab size
 Plugin 'tpope/vim-surround'             " easily change surrounding text
+Plugin 'tpope/vim-vinegar'              " open files quickly
 Plugin 'vim-airline/vim-airline'        " status line
 Plugin 'vim-airline/vim-airline-themes' " theme for status line
 Plugin 'airblade/vim-gitgutter'         " easily view changed lines
@@ -57,13 +59,15 @@ else
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+" use system clipboard as unnamed register
+set clipboard=unnamed
+
 " easymotion configuration
 nmap s <Plug>(easymotion-s)
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map n <Plug>(easymotion-next)
 map N <Plug>(easymotion-prev)
-
 " turn on case insensitive feature
 let g:EasyMotion_smartcase=1
 
@@ -107,6 +111,11 @@ set laststatus=2
 
 " CtrlP mapping
 let g:ctrlp_map='<leader>p'
+" CtrlPTag mapping
+nnoremap <leader>t :CtrlPTag<CR>
+
+" Tagbar mapping
+nnoremap <silent> <leader>v :TagbarToggle<CR>
 
 " use ctrl c instead of esc
 imap <C-c> <esc>

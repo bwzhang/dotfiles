@@ -4,6 +4,9 @@ export ZSH=/Users/brandonzhang/.oh-my-zsh
 # Use MacVim binary
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
+# Don't use OSX ctags
+alias ctags="/usr/local/bin/ctags"
+
 # Fix colors for base16 vim color scheme
 BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
