@@ -11,13 +11,14 @@ Plugin 'austintaylor/vim-indentobject'  " text object for indents
 Plugin 'chriskempson/base16-vim'        " colorscheme
 Plugin 'easymotion/vim-easymotion'      " convenient cursor motion
 Plugin 'godlygeek/tabular'              " align text
+Plugin 'jiangmiao/auto-pairs'           " close brackets, quotes, etc.
 Plugin 'kien/ctrlp.vim'                 " fuzzy finder
 Plugin 'mattn/gist-vim'                 " quickly make github gists
 Plugin 'majutsushi/tagbar'              " browse ctags
 Plugin 'ntpeters/vim-better-whitespace' " remove trailing whitespace
 Plugin 'scrooloose/nerdcommenter'       " quick commenting
 Plugin 'scrooloose/nerdtree'            " visual file tree
-Plugin 'scrooloose/syntastic'           " syntax checking
+Plugin 'scrooloose/syntastic'           " syntax highlighting
 Plugin 'sjl/gundo.vim'                  " to revert edits
 Plugin 'terryma/vim-multiple-cursors'   " edit multiple locations
 Plugin 'tpope/vim-fugitive'             " git plugin
@@ -59,23 +60,14 @@ else
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-" use system clipboard as unnamed register
-set clipboard=unnamed
+" don't unload buffers when I leave them
+set hidden
 
-" easymotion configuration
-nmap s <Plug>(easymotion-s)
-map / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-map n <Plug>(easymotion-next)
-map N <Plug>(easymotion-prev)
-" turn on case insensitive feature
-let g:EasyMotion_smartcase=1
-
-" nerdtreee configuration
-" maps <leader>f to open nerdtree
-map <silent> <leader>f :NERDTreeToggle<CR>
-" close nerdtree if it's the only window open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Make searches case insensitive
+set ignorecase
+" Only highlight search as it's typed in
+set nohlsearch
+set incsearch
 
 " map <leader>g to toggle gundo
 map <silent> <leader>g :GundoToggle<CR>
@@ -121,7 +113,6 @@ nnoremap <silent> <leader>v :TagbarToggle<CR>
 imap <C-c> <esc>
 
 
-" tab with 4 spaces
 set smartindent
 set expandtab
 
@@ -136,6 +127,14 @@ nnoremap <C-y> 6<C-y>
 " strip trailing whitespace on save
 autocmd BufWritePre * StripWhitespace
 
+" common command typos
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+:command Bd bd
+:command BD bd
+
 " leave insert mode quickly
 if ! has('gui_running')
   set ttimeoutlen=10
@@ -145,3 +144,7 @@ if ! has('gui_running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
+
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
+

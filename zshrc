@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/brandonzhang/.oh-my-zsh
 
+# Use latest vim
+#alias vim='/usr/local/bin/vim'
 # Use MacVim binary
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
@@ -13,6 +15,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 
 # Set JAVA_HOME
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
+# Always use -use-ocamlfind with ocamlbuild
+alias ocamlbuild="ocamlbuild -use-ocamlfind"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -95,3 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# OPAM configuration
+. /Users/brandonzhang/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

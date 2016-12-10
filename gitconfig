@@ -9,3 +9,5 @@
 	editor = /usr/bin/vim
 [github]
 	user = bwzhang
+[push]
+	default = matching
