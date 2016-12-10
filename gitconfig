@@ -6,7 +6,7 @@
 	name = Brandon Zhang
 	email = bwzhang@gmail.com
 [core]
-	editor = vim
+	editor = /Applications/MacVim.app/Contents/MacOS/Vim
 [github]
 	user = bwzhang
 [push]
