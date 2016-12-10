@@ -6,8 +6,10 @@
 	name = Brandon Zhang
 	email = bwzhang@gmail.com
 [core]
-	editor = /usr/bin/vim
+	editor = vim
 [github]
 	user = bwzhang
 [push]
 	default = matching
+[diff]
+	tool = vimdiff
