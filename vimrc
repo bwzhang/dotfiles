@@ -20,22 +20,21 @@ Plug 'tpope/vim-surround'             " easily change surrounding text
 Plug 'tpope/vim-vinegar'              " open files quickly
 Plug 'vim-airline/vim-airline'        " status line
 Plug 'vim-airline/vim-airline-themes' " theme for status line
-Plug 'airblade/vim-gitgutter'         " easily view changed lines
 Plug 'benmills/vimux'                 " run commands from tmux pane
 Plug 'Valloric/YouCompleteMe'         " code completion
 
 call plug#end()
+
+set background=dark
+let &t_Co=256
+let base16colorspace=256
+colorscheme base16-default-dark
 
 let mapleader = "\<Space>"
 
 set relativenumber
 
 syntax enable
-
-set background=dark
-let &t_Co=256
-let base16colorspace=256
-colorscheme base16-default-dark
 
 " Change cursor type for different modes
 if exists('$TMUX')
@@ -54,21 +53,8 @@ set ignorecase
 set nohlsearch
 set incsearch
 
-map <leader><leader> <C-6>
-
 map <silent> <leader>f :NERDTreeToggle<CR>
-
-" Map <leader>g to toggle gundo
 map <silent> <leader>g :GundoToggle<CR>
-
-" Stop using arrow keys
-noremap <Up>    <NOP>
-noremap <Down>  <NOP>
-noremap <Left>  <NOP>
-noremap <Right> <NOP>
-
-" Disable gitgutter by default
-let g:gitgutter_enabled = 0
 
 " Show open buffers when only one tab is open
 let g:airline#extensions#tabline#enabled=1
@@ -127,3 +113,9 @@ autocmd BufWritePre * StripWhitespace
 :command Q q
 :command Bd bd
 :command BD bd
+
+" Stop using arrow keys
+noremap <Up>    <NOP>
+noremap <Down>  <NOP>
+noremap <Left>  <NOP>
+noremap <Right> <NOP>
