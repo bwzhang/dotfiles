@@ -16,9 +16,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 # Set JAVA_HOME
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 
-# Always use -use-ocamlfind with ocamlbuild
-alias ocamlbuild="ocamlbuild -use-ocamlfind"
-
 # Other themes in ~/.oh-my-zsh/themes/
 ZSH_THEME="brandonzhang"
 

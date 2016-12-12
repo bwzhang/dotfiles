@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'chriskempson/base16-vim'        " colorscheme
 Plugin 'godlygeek/tabular'              " align text
 Plugin 'jiangmiao/auto-pairs'           " close brackets, quotes, etc.
+Plugin 'junegunn/fzf'                   " fuzzy finder
 Plugin 'kien/ctrlp.vim'                 " fuzzy finder
 Plugin 'ntpeters/vim-better-whitespace' " remove trailing whitespace
 Plugin 'scrooloose/nerdcommenter'       " quick commenting
@@ -39,7 +40,7 @@ syntax enable
 set background=dark
 let &t_Co=256
 let base16colorspace=256
-colorscheme base16-default
+colorscheme base16-default-dark
 
 " Change cursor type for different modes
 if exists('$TMUX')
@@ -57,6 +58,10 @@ set hidden
 set ignorecase
 set nohlsearch
 set incsearch
+
+map <leader><leader> <C-6>
+
+map <silent> <leader>f :NERDTreeToggle<CR>
 
 " Map <leader>g to toggle gundo
 map <silent> <leader>g :GundoToggle<CR>
