@@ -1,36 +1,31 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'chriskempson/base16-vim'        " colorscheme
-Plugin 'godlygeek/tabular'              " align text
-Plugin 'jiangmiao/auto-pairs'           " close brackets, quotes, etc.
-Plugin 'junegunn/fzf'                   " fuzzy finder
-Plugin 'kien/ctrlp.vim'                 " fuzzy finder
-Plugin 'ntpeters/vim-better-whitespace' " remove trailing whitespace
-Plugin 'scrooloose/nerdcommenter'       " quick commenting
-Plugin 'scrooloose/nerdtree'            " visual file tree
-Plugin 'scrooloose/syntastic'           " syntax highlighting
-Plugin 'sjl/gundo.vim'                  " to revert edits
-Plugin 'tpope/vim-fugitive'             " git plugin
-Plugin 'tpope/vim-repeat'               " repeats plugin commands with .
-Plugin 'tpope/vim-sleuth'               " detects tab size
-Plugin 'tpope/vim-surround'             " easily change surrounding text
-Plugin 'tpope/vim-vinegar'              " open files quickly
-Plugin 'vim-airline/vim-airline'        " status line
-Plugin 'vim-airline/vim-airline-themes' " theme for status line
-Plugin 'airblade/vim-gitgutter'         " easily view changed lines
-Plugin 'benmills/vimux'                 " run commands from tmux pane
-Plugin 'Valloric/YouCompleteMe'         " code completion
+Plug 'VundleVim/Vundle.vim'
+Plug 'chriskempson/base16-vim'        " colorscheme
+Plug 'godlygeek/tabular'              " align text
+Plug 'jiangmiao/auto-pairs'           " close brackets, quotes, etc.
+Plug 'junegunn/fzf'                   " fuzzy finder
+Plug 'kien/ctrlp.vim'                 " fuzzy finder
+Plug 'ntpeters/vim-better-whitespace' " remove trailing whitespace
+Plug 'scrooloose/nerdcommenter'       " quick commenting
+Plug 'scrooloose/nerdtree'            " visual file tree
+Plug 'scrooloose/syntastic'           " syntax highlighting
+Plug 'sjl/gundo.vim'                  " to revert edits
+Plug 'tpope/vim-fugitive'             " git plugin
+Plug 'tpope/vim-repeat'               " repeats plugin commands with .
+Plug 'tpope/vim-sleuth'               " detects tab size
+Plug 'tpope/vim-surround'             " easily change surrounding text
+Plug 'tpope/vim-vinegar'              " open files quickly
+Plug 'vim-airline/vim-airline'        " status line
+Plug 'vim-airline/vim-airline-themes' " theme for status line
+Plug 'airblade/vim-gitgutter'         " easily view changed lines
+Plug 'benmills/vimux'                 " run commands from tmux pane
+Plug 'Valloric/YouCompleteMe'         " code completion
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
-" Make <leader> easier to reach
 let mapleader = "\<Space>"
 
 set relativenumber
