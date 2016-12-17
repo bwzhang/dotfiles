@@ -9,6 +9,8 @@ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 # Don't use OSX ctags
 alias ctags="/usr/local/bin/ctags"
 
+export PYTHONPATH="${PYTHONPATH}/usr/local/lib/python2.7/site-packages:/usr/lib/python2.7/site-packages"
+
 # Fix colors for base16 vim color scheme
 BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
@@ -23,7 +25,7 @@ ZSH_THEME="brandonzhang"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-export PATH="/usr/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
+export PATH="/usr/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
 
 source $ZSH/oh-my-zsh.sh
 

@@ -13,3 +13,5 @@
 	default = matching
 [diff]
 	tool = vimdiff
+[pull]
+	rebase = true

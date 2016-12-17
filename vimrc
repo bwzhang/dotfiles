@@ -9,11 +9,13 @@ Plug 'jiangmiao/auto-pairs'           " close brackets, quotes, etc.
 Plug 'junegunn/fzf'                   " fuzzy finder
 Plug 'kien/ctrlp.vim'                 " fuzzy finder
 Plug 'ntpeters/vim-better-whitespace' " remove trailing whitespace
+Plug 'pangloss/vim-javascript'        " better js syntax highlighting
 Plug 'scrooloose/nerdcommenter'       " quick commenting
 Plug 'scrooloose/nerdtree'            " visual file tree
 Plug 'scrooloose/syntastic'           " syntax highlighting
 Plug 'sjl/gundo.vim'                  " to revert edits
 Plug 'tpope/vim-fugitive'             " git plugin
+Plug 'tpope/vim-projectionist'        " move between related files
 Plug 'tpope/vim-repeat'               " repeats plugin commands with .
 Plug 'tpope/vim-sleuth'               " detects tab size
 Plug 'tpope/vim-surround'             " easily change surrounding text
