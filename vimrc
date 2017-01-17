@@ -4,10 +4,12 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'VundleVim/Vundle.vim'
 Plug 'chriskempson/base16-vim'        " colorscheme
+Plug 'derekwyatt/vim-scala'           " scala integration
 Plug 'godlygeek/tabular'              " align text
 Plug 'jiangmiao/auto-pairs'           " close brackets, quotes, etc.
 Plug 'junegunn/fzf'                   " fuzzy finder
 Plug 'kien/ctrlp.vim'                 " fuzzy finder
+Plug 'mxw/vim-jsx'                    " jsx syntax highlighting
 Plug 'ntpeters/vim-better-whitespace' " remove trailing whitespace
 Plug 'pangloss/vim-javascript'        " better js syntax highlighting
 Plug 'scrooloose/nerdcommenter'       " quick commenting
