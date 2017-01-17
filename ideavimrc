@@ -1,0 +1,41 @@
+set nocompatible
+
+let mapleader = "\<Space>"
+
+set relativenumber
+
+syntax enable
+
+" Search settings
+set ignorecase
+set nohlsearch
+set incsearch
+
+" Use ctrl c instead of esc
+imap <C-c> <esc>
+
+" Default tab sizes (may be changed by vim sleuth)
+set smartindent
+set expandtab
+set shiftwidth=4
+
+nnoremap    <tab> :action NextTab<CR>
+nnoremap  <S-tab> :action PreviousTab<CR>
+
+" Scroll faster
+nnoremap <C-e> 6<C-e>
+nnoremap <C-y> 6<C-y>
+
+" Common command typos
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+:command Bd bd
+:command BD bd
+
+" Stop using arrow keys
+noremap <Up>    <NOP>
+noremap <Down>  <NOP>
+noremap <Left>  <NOP>
+noremap <Right> <NOP>
